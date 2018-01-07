@@ -5,18 +5,13 @@ import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
-import com.sun.corba.se.spi.orbutil.fsm.Guard.Result;
-import com.sun.org.apache.xalan.internal.xsltc.compiler.Template;
-import com.sun.tracing.dtrace.ProviderAttributes;
-
-import javafx.scene.control.Label;
 
 public class Vending extends JFrame implements ActionListener {
 
