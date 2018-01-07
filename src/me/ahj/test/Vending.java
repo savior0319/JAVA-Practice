@@ -91,41 +91,45 @@ public class Vending extends JFrame implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 
-		if (e.getSource() == jbt1) {
-			price += 800;
-			count1++;
-			//System.out.println("사이다");
+		try {
+			if (e.getSource() == jbt1) {
+				price += 800;
+				count1++;
+				// System.out.println("사이다");
 
-		} else if (e.getSource() == jbt2) {
-			price += 1000;
-			count2++;
-			//System.out.println("콜라");
+			} else if (e.getSource() == jbt2) {
+				price += 1000;
+				count2++;
+				// System.out.println("콜라");
 
-		} else if (e.getSource() == jbt3) {
-			price += 700;
-			count3++;
-			//System.out.println("밀키스");
+			} else if (e.getSource() == jbt3) {
+				price += 700;
+				count3++;
+				// System.out.println("밀키스");
 
-		} else if (e.getSource() == jbt4) {
-			price += 800;
-			count4++;
-			//System.out.println("포카리");
+			} else if (e.getSource() == jbt4) {
+				price += 800;
+				count4++;
+				// System.out.println("포카리");
 
-		} else if (e.getSource() == jbt5) {
-			input = Integer.parseInt(jtf.getText());
-			output = input - price;
-			String output_str = String.valueOf(output);
-			String count1_str = String.valueOf(count1);
-			String count2_str = String.valueOf(count2);
-			String count3_str = String.valueOf(count3);
-			String count4_str = String.valueOf(count4);
-			if (output >= 0) {
-				jl2.setText(output_str + "원  / " + "사이다 : " + count1_str + "개 / " + "콜라 : " + count2_str + "개 / "
-						+ "밀키스 : " + count3_str + "개 / " + "포카리 : " + count4_str + "개 / ");
-			} else
-				jl2.setText("잔액이 부족합니다 ");
+			} else if (e.getSource() == jbt5) {
+				input = Integer.parseInt(jtf.getText());
+				output = input - price;
+				String output_str = String.valueOf(output);
+				String count1_str = String.valueOf(count1);
+				String count2_str = String.valueOf(count2);
+				String count3_str = String.valueOf(count3);
+				String count4_str = String.valueOf(count4);
 
+				if (output >= 0) {
+					jl2.setText(output_str + "원  / " + "사이다 : " + count1_str + "개 / " + "콜라 : " + count2_str + "개 / "
+							+ "밀키스 : " + count3_str + "개 / " + "포카리 : " + count4_str + "개 / ");
+				} else
+					jl2.setText("잔액이 부족합니다 ");
+			}
+
+		} catch (Exception e1) {
+			jl2.setText("돈을 투입하세요");
 		}
-
 	}
 }
