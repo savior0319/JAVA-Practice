@@ -1,23 +1,39 @@
-# Compiled class file
+# compile exception
+*.com
 *.class
+*.dll
+*.exe
+*.o
+*.so
 
-# Log file
+# log exception
 *.log
 
-# BlueJ files
-*.ctxt
+# OS system file exception
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-/bin/
+# project file exception
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+.project
+.externalToolBuilders/
+*.launch
+.classpath
+.factorypath
+.buildpath
+.target
