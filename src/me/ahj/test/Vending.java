@@ -91,29 +91,29 @@ public class Vending extends JFrame implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 
-		try {
+		input = Integer.parseInt(jtf.getText());
+
+		if (jtf.getText().length() >= 1) {
+
 			if (e.getSource() == jbt1) {
+
 				price += 800;
 				count1++;
-				// System.out.println("사이다");
 
 			} else if (e.getSource() == jbt2) {
 				price += 1000;
 				count2++;
-				// System.out.println("콜라");
 
 			} else if (e.getSource() == jbt3) {
 				price += 700;
 				count3++;
-				// System.out.println("밀키스");
 
 			} else if (e.getSource() == jbt4) {
 				price += 800;
 				count4++;
-				// System.out.println("포카리");
 
 			} else if (e.getSource() == jbt5) {
-				input = Integer.parseInt(jtf.getText());
+
 				output = input - price;
 				String output_str = String.valueOf(output);
 				String count1_str = String.valueOf(count1);
@@ -127,8 +127,8 @@ public class Vending extends JFrame implements ActionListener {
 				} else
 					jl2.setText("잔액이 부족합니다 ");
 			}
-
-		} catch (Exception e1) {
+		}
+		else if(jtf.getText().length() == 0) {
 			jl2.setText("돈을 투입하세요");
 		}
 	}
