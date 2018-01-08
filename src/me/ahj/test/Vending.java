@@ -91,9 +91,13 @@ public class Vending extends JFrame implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 
-		input = Integer.parseInt(jtf.getText());
+		try {
+			input = Integer.parseInt(jtf.getText());
+		} catch (Exception e1) {
+			jl2.setText("돈을 투입하세요");
+		}
 
-		if (jtf.getText().length() >= 1) {
+		if (!jtf.getText().equals("")) {
 
 			if (e.getSource() == jbt1) {
 
@@ -127,9 +131,6 @@ public class Vending extends JFrame implements ActionListener {
 				} else
 					jl2.setText("잔액이 부족합니다 ");
 			}
-		}
-		else if(jtf.getText().length() == 0) {
-			jl2.setText("돈을 투입하세요");
 		}
 	}
 }
