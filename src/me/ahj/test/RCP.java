@@ -10,7 +10,7 @@ public class RCP {
 	public RCP(int user) {
 
 		Random ran = new Random();
-
+		
 		for (int i = 0; i < 3; i++) {
 			rannum = ran.nextInt(3) + 1;
 		}
