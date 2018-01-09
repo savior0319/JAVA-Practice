@@ -1,9 +1,17 @@
 package me.ahj.memberAPP;
 
-import java.awt.*;
-import javax.swing.*;
-import javax.swing.table.*;
-import java.sql.*;
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 public class TableGUI extends JFrame {
 
